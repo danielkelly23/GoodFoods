@@ -1,0 +1,29 @@
+.logo {
+  margin-top: 10%;
+  text-align: left;
+}
+
+ion-item {
+  margin-top: 5%;
+}
+
+ion-item::part(native) {
+  border-radius: 20px;
+}
+
+.fp {
+  text-align: end;
+  font-weight: 550;
+  margin-right: 5%;
+}
+
+ion-button {
+  --background: #3ffb52;
+  --color: black;
+
+  ion-icon {
+    margin-right: 5%;
+  }
+}
+
+

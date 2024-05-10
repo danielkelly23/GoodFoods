@@ -1,0 +1,85 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    
+      
+    
+    <ion-row>
+      <ion-col offset="0.5" size="11">
+        <ion-item lines="none">
+          <ion-icon name="search" slot="start"></ion-icon>
+          <ion-input placeholder="Search Good Foods"> </ion-input>
+          
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="hscroll">
+          <div *ngFor="let item of itemMenu">
+            <img src="{{item.img}}" />
+            <p>{{item.dis}}</p>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="0.5" class="title"
+        ><p>Good Foods Meals of the Week</p>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="light" shape="round" size="block">
+          <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+   
+    <ion-row>
+      <ion-col class="check">
+        <ion-card class="card" *ngFor="let item of itemoffer">
+          <ion-row class="offer">
+            <ion-col size="10">
+              <p>{{item.offr}}</p>
+            </ion-col>
+            <ion-col size="2" class="favicon">
+              <ion-icon name="heart-outline"></ion-icon
+            ></ion-col>
+          </ion-row>
+          <img src="{{item.img}}" />
+          <ion-row>
+            <ion-col size="9">
+              <p class="headline">{{item.titl}}</p>
+              <p class="subline">{{item.dis}}</p>
+            </ion-col>
+            <ion-col size="3" class="rating">
+              <p>{{item.str}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="0.5" class="title"><p>Hot spots</p></ion-col>
+      <ion-col size="3">
+        <ion-button
+          color="light"
+          shape="round"
+          size="block"
+          (click)="openhotsports()"
+        >
+          <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="0.5" *ngFor="let item of menuItem" class="divcard">
+        <div>
+          <img src="{{item.img}}" />
+          <p>{{item.dis}}</p>
+          <p><span>$</span> {{item.rate}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

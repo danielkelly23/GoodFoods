@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="logo">
+      <ion-col>
+        <img src="assets/welcomeLogo.png" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset=".5" size="8">
+        <ion-list class="inputfield">
+          <ion-item fill="outline" lines="none">
+            <ion-input placeholder="Email"></ion-input>
+          </ion-item>
+          <ion-item fill="outline" lines="none">
+            <ion-input placeholder="Password" type="password"></ion-input>
+            <ion-icon name="eye-off-outline" slot="end"></ion-icon>
+          </ion-item>
+          <ion-item fill="outline" lines="none">
+            <ion-input
+              placeholder="Confirm Password"
+              type="password"
+            ></ion-input>
+            <ion-icon name="eye-off-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset=".5" size="8">
+        <ion-button expand="block" shape="round" size="large" (click)="signup()"
+          >Sign up</ion-button
+        ></ion-col
+      >
+    </ion-row>
+    
+
+    <ion-row class="lastline">
+      <ion-col>
+        Already have an account? <span (click)="login()">Log in</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
